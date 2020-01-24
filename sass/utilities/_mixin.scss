@@ -1,0 +1,247 @@
+@mixin clearfix() {
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin float-left {
+    float: left !important;
+}
+
+@mixin float-right {
+    float: right !important;
+}
+
+@mixin float-none {
+    float: none !important;
+}
+
+@mixin input-placeholder($color){
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;  
+  }
+  &::-moz-placeholder { 
+    color: $color;  
+  }
+  &:-ms-input-placeholder {  
+    color: $color;  
+  }
+}
+
+@mixin box-sizing($val){
+  -webkit-box-sizing: $val; 
+  -moz-box-sizing: $val; 
+  box-sizing: $val;
+}
+
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -ms-border-radius:     $radius;
+  border-radius:         $radius;
+}
+
+@mixin box-shadow($left, $top, $blur, $spread, $color, $inset:"") {
+  -webkit-box-shadow: $left $top $blur $spread $color #{$inset};
+  -moz-box-shadow: $left $top $blur $spread $color #{$inset};
+  box-shadow: $left $top $blur $spread $color #{$inset};
+}
+@mixin box-shadow-none(){
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+@mixin opacity($trans) {
+  filter: alpha(opacity=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}',GradientType=0 ); /* IE6-9 */
+}
+
+// Pass in any number of transitions
+@mixin transition($transitions) {
+  
+  
+  -webkit-transition: $transitions;
+  -moz-transition: $transitions;
+  -ms-transition: $transitions;
+  -o-transition: $transitions;
+  transition: $transitions;
+}
+
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// Translate
+@mixin translate ($x: 0, $y: 0) {
+  @include transform(translate($x, $y));
+}
+// Rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+// Scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+//Transform origin
+@mixin transform-origin($origin) {
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@mixin object-fit($value){
+      width: 100%;
+    height: 100%;
+    -o-object-fit: $value;
+    object-fit: $value;
+    -o-object-position: $value;
+    object-position: $value;
+}
+
+
+@mixin button ( $filled: '', $button-size: '',
+$button-type:'',$button-color:'',$button-icon:''){
+  display: inline-block;
+  cursor:pointer;
+  outline:none;
+  @include transition(0.3s);
+  
+  @if $button-icon == sq{
+
+    width:45px;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    
+  }
+
+  //$filled
+    @if  $filled == filled{
+        @each $i in $color-list {
+        $alt-color: nth($i, 3);
+        &.#{nth($i, 2)}-#{nth($i, 1)} {
+        color: #fff;
+        background-color: $alt-color;
+        &:hover {
+          background-color:lighten($alt-color,10%);
+          color: #fff
+        }
+        
+      }
+        }
+    }
+    @else{
+     
+         @each $i in $color-list {
+        $alt-color: nth($i, 3);
+        &.#{nth($i, 2)}-#{nth($i, 1)} {
+        color: $alt-color;
+        border:1px solid $alt-color;
+         background:none ;
+        &:hover {
+          background-color:darken($alt-color,10%); 
+          border:1px solid transparent;
+          color:#fff;
+        }
+        }
+  
+  }
+  
+    }
+  
+  
+  //size
+  @if $button-size == "regular" {
+    font-size: 1.05rem;
+    padding: 10px 30px ;
+    text-decoration: none;
+  text-transform: uppercase;
+  font-weight: $font-weight-medium;
+  } @else if $button-size == "large"{
+     
+      font-size: 1.05rem;
+      padding: 15px 30px ;
+      width:100%;
+      text-decoration: none;
+  text-transform: uppercase;
+font-weight: $font-weight-medium;
+    
+  }
+  @else{
+    padding:0;
+  }
+  
+  
+  
+  
+      @if  $button-type == round{
+         border-radius:$border-radius;
+
+         @each $i in $color-list {
+            $alt-color: nth($i, 3);
+            &.#{nth($i, 2)}-#{nth($i, 1)} {
+              border-color:$alt-color;
+            }
+        }
+
+
+
+         border:1px solid border-color;
+         
+      }
+      @else{
+          border-radius:4px;
+      
+      }
+
+  
+}
+
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+      url('#{$src}.woff') format('woff'), // standards
+      url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+      url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}

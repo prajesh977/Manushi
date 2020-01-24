@@ -1,0 +1,96 @@
+@mixin container(){
+	width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    @include breakpoint(md){
+    	width: 970px;
+    }
+    @include breakpoint(lg){
+        width: 1170px;
+    }
+}
+.container{
+	width: 100%;
+	float: none;
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @include breakpoint(sm){
+    	width: 95%;
+    }
+    &.large{
+    	@include breakpoint (lg){
+    		max-width:1360px;
+    	}
+    }
+}
+
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+.float-none{
+	display: inline-block;
+	float: none;
+	margin: 0px auto;
+}
+.clear{
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+.clearfix{
+	@include clearfix();
+}
+.table{
+	&-responsive{
+		overflow-x: auto;
+		overflow-y: hidden;
+		width: 100%;
+		max-width: 100%;
+	}
+	&-nowrap{
+		td, th{
+			white-space: nowrap;
+		}
+	}
+}
+.sr-none{
+	display: none !important;
+}
+
+
+.flexbox{
+	@include flexbox();
+}
+.flexwrap{
+	@include flex-wrap(wrap);
+}
+.Aic{
+	@include align-items(center);
+}
+.Aie{
+	@include align-items(flex-end);
+}
+.Ais{
+	@include align-items(flex-start);
+}
+.Aic{
+	@include align-items(center);
+}
+.Aic{
+	@include align-items(center);
+}
+.Jcc{
+	@include justify-content(center);
+}
+.Jce{
+	@include justify-content(flex-end);
+}
+.Jcs{
+	@include justify-content(flex-start);
+}

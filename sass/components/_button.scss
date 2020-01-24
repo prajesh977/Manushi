@@ -1,0 +1,41 @@
+@import 'utilities/mixin';
+@import 'utilities/variables';
+@import 'components/text';
+
+.btn{
+  @include button(filled,regular,'',blue,'')
+}
+.btn.outline{
+  @include button('', regular,'','')
+}
+.btn.round{
+  @include button(filled, regular,'round',blue,'')
+}
+
+.btn.round.outline{
+  @include button('', regular,round,blue,'')
+}
+.btn.sq{
+  @include button(filled,'','',blue,sq)
+}
+.btn.sq.outline{
+  @include button('','','','',sq)
+}
+.btn.sq.round{
+  @include button(filled,'',round,blue,sq)
+}
+.btn.round.sq.outline{
+  @include button('', '',round,blue,sq)
+}
+.btn.large{
+	 @include button(filled,large,'',blue,'')
+}
+.btn.large.round{
+	 @include button(filled,large,round,blue,'')
+}
+.btn.large.outline{
+	 @include button('',large,'',blue,'')
+}
+.btn.large.outline.round{
+	 @include button('',large,round,blue,'')
+}

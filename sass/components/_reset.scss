@@ -1,0 +1,55 @@
+@import '../utilities/flexbox';
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.breadcrumb{
+	background:none;
+}
+*:focus{
+outline:none  !important;
+box-shadow:none !important;
+}
+
+.in-block {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.none {
+    display: none !important;
+}
+.PosR{
+	position:relative
+}
+.PosA{
+	position:absolute;
+}
+.PosF{
+	position:fixed;
+}
+
+.flex-middle{
+	@include flexbox();
+	@include align-items(center);
+}
+
+.flex-center{
+	@include flexbox();
+	@include justify-content(center);
+}
+
+.ta-center{
+	text-align:center;
+}
+.ta-right{
+	text-align:right;
+}
+.ta-left{
+	text-align:left
+}

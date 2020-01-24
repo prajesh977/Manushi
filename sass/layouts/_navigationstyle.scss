@@ -1,0 +1,79 @@
+.navbar-toggler{
+    outline:none;
+    overflow: visible;
+    margin: 0;
+    padding: 25px 15px;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transition-property: opacity,filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+	position:relative;
+    &:focus{
+        outline:none;
+    }
+}
+.navbar-toggler .navbar-toggler-icon {
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-duration: .22s;
+}
+.navbar-toggler-icon,.navbar-toggler-icon:before,.navbar-toggler-icon:after {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #ddd
+}
+.navbar-toggler-icon:before,.navbar-toggler-icon:after{
+    display: block;
+    content: "";
+}
+.navbar-toggler-icon:before{
+    top: -10px;
+}
+ .navbar-toggler-icon:after{
+    bottom: -10px;
+}
+
+.navbar-toggler .navbar-toggler-icon:before{
+    transition: top .1s ease-in .25s,opacity .1s ease-in;
+}
+
+.navbar-toggler .navbar-toggler-icon:after{
+    transition: bottom .1s ease-in .25s,transform .22s cubic-bezier(.55,.055,.675,.19);
+}
+
+.navbar-toggler.active .navbar-toggler-icon{
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: rotate(225deg);
+}
+
+.navbar-toggler-icon,.navbar-toggler-icon:before,.navbar-toggler-icon:after  {
+    background-color: #ddd
+}
+
+
+.navbar-toggler.active .navbar-toggler-icon:before{
+    top: 0;
+    transition: top .1s ease-out,opacity .1s ease-out .12s;
+    opacity: 0;
+}
+.navbar-toggler.active .navbar-toggler-icon:after{
+    bottom: 0;
+    transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+    transform: rotate(-90deg);
+}
+.navbar-toggler.collapsed .navbar-toggler-icon:before{
+    transition: top .1s ease-in .25s,opacity .1s ease-in;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon, .navbar-toggler.collapsed .navbar-toggler-icon:before, .navbar-toggler.collapsed .navbar-toggler-icon:after{
+    background-color: #ccc
+}

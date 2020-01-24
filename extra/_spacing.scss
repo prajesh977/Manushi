@@ -1,0 +1,501 @@
+$max-val:40;
+@for $i from 0 through 10 {
+    $value: $i;
+    @if $value % 5 !=0 {
+        .Pa-#{$value} {
+            padding: $value+px !important;
+        }
+        .Pt-#{$value} {
+            padding-top: $value+px !important;
+        }
+        .Pr-#{$value} {
+            padding-right: $value+px !important;
+        }
+        .Pb-#{$value} {
+            padding-bottom: $value+px !important;
+        }
+        .Pl-#{$value} {
+            padding-left: $value+px !important;
+        }
+        .Px-#{$value} {
+            padding-left: $value+px !important;
+            padding-right: $value+px !important;
+        }
+        .Py-#{$value} {
+            padding-top: $value+px !important;
+            padding-bottom: $value+px !important;
+        }
+    }
+    @else if $value==0 {
+        .Pa-#{$value} {
+            padding: $value+px !important;
+        }
+        .Pt-#{$value} {
+            padding-top: $value+px !important;
+        }
+        .Pr-#{$value} {
+            padding-right: $value+px !important;
+        }
+        .Pb-#{$value} {
+            padding-bottom: $value+px !important;
+        }
+        .Pl-#{$value} {
+            padding-left: $value+px !important;
+        }
+        .Px-#{$value} {
+            padding-left: $value+px !important;
+            padding-right: $value+px !important;
+        }
+        .Py-#{$value} {
+            padding-top: $value+px !important;
+            padding-bottom: $value+px !important;
+        }
+    }
+}
+
+@for $i from 1 through $max-val {
+    $value: $i;
+    $multValue: $i * 5;
+    .Pa-#{$value}x {
+        padding: $multValue+px !important;
+    }
+    .Pt-#{$value}x {
+        padding-top: $multValue+px !important;
+    }
+    .Pr-#{$value}x {
+        padding-right: $multValue+px !important;
+    }
+    .Pb-#{$value}x {
+        padding-bottom: $multValue+px !important;
+    }
+    .Pl-#{$value}x {
+        padding-left: $multValue+px !important;
+    }
+    .Px-#{$value}x {
+        padding-left: $multValue+px !important;
+        padding-right: $multValue+px !important;
+    }
+    .Py-#{$value}x {
+        padding-top: $multValue+px !important;
+        padding-bottom: $multValue+px !important;
+    }
+}
+
+// //tablet
+@media all and(min-width:768px) and (max-width: 1023px) {
+    @for $i from 0 through 10 {
+        $value: $i;
+        @if $value % 5 !=0 {
+            .tb-Pa-#{$value} {
+                padding: $value+px !important;
+            }
+            .tb-Pt-#{$value} {
+                padding-top: $value+px !important;
+            }
+            .tb-Pr-#{$value} {
+                padding-right: $value+px !important;
+            }
+            .tb-Pb-#{$value} {
+                padding-bottom: $value+px !important;
+            }
+            .tb-Pl-#{$value} {
+                padding-left: $value+px !important;
+            }
+            .tb-Px-#{$value} {
+                padding-left: $value+px !important;
+                padding-right: $value+px !important;
+            }
+            .tb-Py-#{$value} {
+                padding-top: $value+px !important;
+                padding-bottom: $value+px !important;
+            }
+        }
+        @else if $value==0 {
+            .tb-Pa-#{$value} {
+                padding: $value+px !important;
+            }
+            .tb-Pt-#{$value} {
+                padding-top: $value+px !important;
+            }
+            .tb-Pr-#{$value} {
+                padding-right: $value+px !important;
+            }
+            .tb-Pb-#{$value} {
+                padding-bottom: $value+px !important;
+            }
+            .tb-Pl-#{$value} {
+                padding-left: $value+px !important;
+            }
+            .tb-Px-#{$value} {
+                padding-left: $value+px !important;
+                padding-right: $value+px !important;
+            }
+            .tb-Py-#{$value} {
+                padding-top: $value+px !important;
+                padding-bottom: $value+px !important;
+            }
+        }
+    }
+    @for $i from 1 through $max-val {
+        $value: $i;
+        $multValue: $i * 5;
+        .tb-Pa-#{$value}x {
+            padding: $multValue+px !important;
+        }
+        .tb-Pt-#{$value}x {
+            padding-top: $multValue+px !important;
+        }
+        .tb-Pr-#{$value}x {
+            padding-right: $multValue+px !important;
+        }
+        .tb-Pb-#{$value}x {
+            padding-bottom: $multValue+px !important;
+        }
+        .tb-Pl-#{$value}x {
+            padding-left: $multValue+px !important;
+        }
+        .tb-Px-#{$value}x {
+            padding-left: $multValue+px !important;
+            padding-right: $multValue+px !important;
+        }
+        .tb-Py-#{$value}x {
+            padding-top: $multValue+px !important;
+            padding-bottom: $multValue+px !important;
+        }
+    }
+}
+
+//mobile
+@media all and (max-width: 767px) {
+    @for $i from 0 through 10 {
+        $value: $i;
+        @if $value % 5 !=0 {
+            .mb-Pa-#{$value} {
+                padding: $value+px !important;
+            }
+            .mb-Pt-#{$value} {
+                padding-top: $value+px !important;
+            }
+            .mb-Pr-#{$value} {
+                padding-right: $value+px !important;
+            }
+            .mb-Pb-#{$value} {
+                padding-bottom: $value+px !important;
+            }
+            .mb-Pl-#{$value} {
+                padding-left: $value+px !important;
+            }
+            .mb-Px-#{$value} {
+                padding-left: $value+px !important;
+                padding-right: $value+px !important;
+            }
+            .mb-Py-#{$value} {
+                padding-top: $value+px !important;
+                padding-bottom: $value+px !important;
+            }
+        }
+        @else if $value==0 {
+            .mb-Pa-#{$value} {
+                padding: $value+px !important;
+            }
+            .mb-Pt-#{$value} {
+                padding-top: $value+px !important;
+            }
+            .mb-Pr-#{$value} {
+                padding-right: $value+px !important;
+            }
+            .mb-Pb-#{$value} {
+                padding-bottom: $value+px !important;
+            }
+            .mb-Pl-#{$value} {
+                padding-left: $value+px !important;
+            }
+            .mb-Px-#{$value} {
+                padding-left: $value+px !important;
+                padding-right: $value+px !important;
+            }
+            .mb-Py-#{$value} {
+                padding-top: $value+px !important;
+                padding-bottom: $value+px !important;
+            }
+        }
+    }
+    @for $i from 1 through $max-val {
+        $value: $i;
+        $multValue: $i * 5;
+        .mb-Pa-#{$value}x {
+            padding: $multValue+px !important;
+        }
+        .mb-Pt-#{$value}x {
+            padding-top: $multValue+px !important;
+        }
+        .mb-Pr-#{$value}x {
+            padding-right: $multValue+px !important;
+        }
+        .mb-Pb-#{$value}x {
+            padding-bottom: $multValue+px !important;
+        }
+        .mb-Pl-#{$value}x {
+            padding-left: $multValue+px !important;
+        }
+        .mb-Px-#{$value}x {
+            padding-left: $multValue+px !important;
+            padding-right: $multValue+px !important;
+        }
+        .mb-Py-#{$value}x {
+            padding-top: $multValue+px !important;
+            padding-bottom: $multValue+px !important;
+        }
+    }
+}
+
+// margin
+$max-val:40;
+@for $i from 0 through 10 {
+    $value: $i;
+    @if $value % 5 !=0 {
+        .Ma-#{$value} {
+            margin: $value+px !important;
+        }
+        .Mt-#{$value} {
+            margin-top: $value+px !important;
+        }
+        .Mr-#{$value} {
+            margin-right: $value+px !important;
+        }
+        .Mb-#{$value} {
+            margin-bottom: $value+px !important;
+        }
+        .Ml-#{$value} {
+            margin-left: $value+px !important;
+        }
+        .Mx-#{$value} {
+            margin-left: $value+px !important;
+            margin-right: $value+px !important;
+        }
+        .My-#{$value} {
+            margin-top: $value+px !important;
+            margin-bottom: $value+px !important;
+        }
+    }
+    @else if $value==0 {
+        .Ma-#{$value} {
+            margin: $value+px !important;
+        }
+        .Mt-#{$value} {
+            margin-top: $value+px !important;
+        }
+        .Mr-#{$value} {
+            margin-right: $value+px !important;
+        }
+        .Mb-#{$value} {
+            margin-bottom: $value+px !important;
+        }
+        .Ml-#{$value} {
+            margin-left: $value+px !important;
+        }
+        .Mx-#{$value} {
+            margin-left: $value+px !important;
+            margin-right: $value+px !important;
+        }
+        .My-#{$value} {
+            margin-top: $value+px !important;
+            margin-bottom: $value+px !important;
+        }
+    }
+    @for $i from 1 through $max-val {
+        $value: $i;
+        $multValue: $i * 5;
+        .Ma-#{$value}x {
+            margin: $multValue+px !important;
+        }
+        .Mt-#{$value}x {
+            margin-top: $multValue+px !important;
+        }
+        .Mr-#{$value}x {
+            margin-right: $multValue+px !important;
+        }
+        .Mb-#{$value}x {
+            margin-bottom: $multValue+px !important;
+        }
+        .Ml-#{$value}x {
+            margin-left: $multValue+px !important;
+        }
+        .Mx-#{$value}x {
+            margin-left: $multValue+px !important;
+            margin-right: $multValue+px !important;
+        }
+        .My-#{$value}x {
+            margin-top: $multValue+px !important;
+            margin-bottom: $multValue+px !important;
+        }
+    }
+}
+
+// //tablet
+@media all and(min-width:768px) and (max-width: 1023px) {
+    @for $i from 0 through 10 {
+        $value: $i;
+        @if $value % 5 !=0 {
+            .tb-Ma-#{$value} {
+                margin: $value+px !important;
+            }
+            .tb-Mt-#{$value} {
+                margin-top: $value+px !important;
+            }
+            .tb-Mr-#{$value} {
+                margin-right: $value+px !important;
+            }
+            .tb-Mb-#{$value} {
+                margin-bottom: $value+px !important;
+            }
+            .tb-Ml-#{$value} {
+                margin-left: $value+px !important;
+            }
+            .tb-Mx-#{$value} {
+                margin-left: $value+px !important;
+                margin-right: $value+px !important;
+            }
+            .tb-My-#{$value} {
+                margin-top: $value+px !important;
+                margin-bottom: $value+px !important;
+            }
+        }
+        @else if $value==0 {
+            .tb-Ma-#{$value} {
+                margin: $value+px !important;
+            }
+            .tb-Mt-#{$value} {
+                margin-top: $value+px !important;
+            }
+            .tb-Mr-#{$value} {
+                margin-right: $value+px !important;
+            }
+            .tb-Mb-#{$value} {
+                margin-bottom: $value+px !important;
+            }
+            .tb-Ml-#{$value} {
+                margin-left: $value+px !important;
+            }
+            .tb-Mx-#{$value} {
+                margin-left: $value+px !important;
+                margin-right: $value+px !important;
+            }
+            .tb-My-#{$value} {
+                margin-top: $value+px !important;
+                margin-bottom: $value+px !important;
+            }
+        }
+    }
+    @for $i from 1 through $max-val {
+        $value: $i;
+        $multValue: $i * 5;
+        .tb-Ma-#{$value}x {
+            margin: $multValue+px !important;
+        }
+        .tb-Mt-#{$value}x {
+            margin-top: $multValue+px !important;
+        }
+        .tb-Mr-#{$value}x {
+            margin-right: $multValue+px !important;
+        }
+        .tb-Mb-#{$value}x {
+            margin-bottom: $multValue+px !important;
+        }
+        .tb-Ml-#{$value}x {
+            margin-left: $multValue+px !important;
+        }
+        .tb-Mx-#{$value}x {
+            margin-left: $multValue+px !important;
+            margin-right: $multValue+px !important;
+        }
+        .tb-My-#{$value}x {
+            margin-top: $multValue+px !important;
+            margin-bottom: $multValue+px !important;
+        }
+    }
+}
+
+//mobile
+@media all and (max-width: 767px) {
+    @for $i from 0 through 10 {
+        $value: $i;
+        @if $value % 5 !=0 {
+            .mb-Ma-#{$value} {
+                margin: $value+px !important;
+            }
+            .mb-Mt-#{$value} {
+                margin-top: $value+px !important;
+            }
+            .mb-Mr-#{$value} {
+                margin-right: $value+px !important;
+            }
+            .mb-Mb-#{$value} {
+                margin-bottom: $value+px !important;
+            }
+            .mb-Ml-#{$value} {
+                margin-left: $value+px !important;
+            }
+            .mb-Mx-#{$value} {
+                margin-left: $value+px !important;
+                margin-right: $value+px !important;
+            }
+            .mb-My-#{$value} {
+                margin-top: $value+px !important;
+                margin-bottom: $value+px !important;
+            }
+        }
+        @else if $value==0 {
+            .mb-Ma-#{$value} {
+                margin: $value+px !important;
+            }
+            .mb-Mt-#{$value} {
+                margin-top: $value+px !important;
+            }
+            .mb-Mr-#{$value} {
+                margin-right: $value+px !important;
+            }
+            .mb-Mb-#{$value} {
+                margin-bottom: $value+px !important;
+            }
+            .mb-Ml-#{$value} {
+                margin-left: $value+px !important;
+            }
+            .mb-Mx-#{$value} {
+                margin-left: $value+px !important;
+                margin-right: $value+px !important;
+            }
+            .mb-My-#{$value} {
+                margin-top: $value+px !important;
+                margin-bottom: $value+px !important;
+            }
+        }
+    }
+    @for $i from 1 through $max-val {
+        $value: $i;
+        $multValue: $i * 5;
+        .mb-Ma-#{$value}x {
+            margin: $multValue+px !important;
+        }
+        .mb-Mt-#{$value}x {
+            margin-top: $multValue+px !important;
+        }
+        .mb-Mr-#{$value}x {
+            margin-right: $multValue+px !important;
+        }
+        .mb-Mb-#{$value}x {
+            margin-bottom: $multValue+px !important;
+        }
+        .mb-Ml-#{$value}x {
+            margin-left: $multValue+px !important;
+        }
+        .mb-Mx-#{$value}x {
+            margin-left: $value+px !important;
+            margin-right: $value+px !important;
+        }
+        .mb-My-#{$value}x {
+            margin-top: $multValue+px !important;
+            margin-bottom: $multValue+px !important;
+        }
+    }
+}

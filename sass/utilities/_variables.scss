@@ -1,0 +1,136 @@
+//colors
+$white:    #fff !default;
+$white:    #fff !default;
+$gray-100: #e7e7e7!default;
+$gray-200: #c5c5c5 !default;
+$gray-300: #A1A1A1 !default;
+$gray-400: #929292 !default;
+$gray-500: #6c757d !default;
+$gray-600: #5E5E5E !default;
+$gray-700: #4A4A4A !default;
+$gray-800: #4A4A4A !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+
+$grays: () !default;
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+
+
+@each $key, $value in $grays{
+  .gray-#{$key}{ color:$value;}
+}
+
+$blue:    #1960a6 !default;
+$blue-black:#262F36;
+$dark:	  #222 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #f8796c  !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffae00 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$def:     #ced4da !default;
+
+// $gold       : rgb(234, 170, 0);
+// $purple     : rgb(149, 149, 210);
+// $blue       : rgb(7, 114, 206);
+// $lightblue  : rgb(65, 182, 230);
+// $green      : rgb(100, 167, 11);
+// $red        : rgb(218, 41, 28);
+// $black      : rgb(0, 0, 0);
+// $white      : rgb(255, 255, 255);
+$border-radius:50px;
+
+$prefix: color;
+//this is in a list 
+$color-list: (
+  'blue' $prefix $blue,
+  'yellow' $prefix $yellow,
+  'orange' $prefix $orange,
+  'teal' $prefix $teal,
+  'green' $prefix $green,
+  'green' $prefix $green,
+  'dark' $prefix $dark,
+  'def' $prefix $def
+);
+
+$colors: () !default;
+$colors: map-merge((
+  "blue":       $blue,
+  "blue-black":	$blue-black,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "dark":		$dark,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+
+@each $key, $values in $colors{
+  .#{$key}{
+    color:$values;
+  }
+}
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $green,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+
+
+@each $key, $values in $theme-colors{
+  .#{$key}{
+    color:$values;
+  }
+}
+
+//fonts
+
+$font-weight-light:           300 !default;
+$font-weight-regular:         400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-base:            $font-weight-regular !default;
+
+
+

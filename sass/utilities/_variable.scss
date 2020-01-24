@@ -1,0 +1,148 @@
+/* THEME-COLOR DEFINATION */
+$primary-color: #C6A227;
+$light-primary-color: #debd4d;
+$accent-color: #AE6F38;
+$light-accent-color: #D59A65;
+
+/* EXTRA-COLOR DEFINATION */
+$highlight-color: #D7972B ;
+$positive-color: #3F91EB;
+$balance-color: #77A431;
+$calm-color: #6A74C3;
+$dark-color: #373536;
+
+/* BACKGROUND-COLOR DEFINATION */
+$background: #F9F8F7;
+$light-background: #f2f2f2;
+$shade-background: #e7e7e7; 
+$dark-background: #373536;
+$divider-color: #d4d4d3;
+
+/* ALERT MESSAGE COLOR DEFINATION */
+$danger-color: #EA5A4E;
+$success-color: #5EC162;
+$warning-color: #F39C11;
+$info-color: #24CCFF;
+$grid-gutter-width:30px;
+$font-size-base:1rem;
+$color-default: #777;
+$color-primary: #1fb6ff;
+$color-secondary:#5b53ef;
+$color-success:#2ddb88;
+$color-danger:#ff524c;
+$color-warn:#f0c54c;
+$color-info:#34425a;
+$color-white:#fff;
+$color-black:#000;
+$color-muted:#e1e1e1;
+$color-dim:#ecf0f5;
+$color-text-link:#777;
+$color-text-light-link:#bbb;
+$color-text-default:#333;
+@function black($val) {
+    @return rgba(0, 0, 0, $val);
+}
+
+//WhiteTransparent
+@function white($val) {
+    @return rgba(255, 255, 255, $val);
+}
+
+$font-size-base:0.95rem;
+$h1-font-size: $font-size-base * 2;
+$h2-font-size: $font-size-base * 1.75;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.25;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base;
+
+
+$font-weight-light:           300 !default;
+$font-weight-regular:         400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-base:            $font-weight-regular !default;
+$base-font-size:16px;
+
+
+
+$white:    #fff !default;
+$gray-100: #e7e7e7!default;
+$gray-200: #c5c5c5 !default;
+$gray-300: #A1A1A1 !default;
+$gray-400: #929292 !default;
+$gray-500: #4A4A4A !default;
+$gray-600: #4A4A4A !default;
+$gray-700: #5E5E5E !default;
+$gray-800: #6c757d !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+@each $key, $value in $grays{
+  .gray-#{$key}{ color:$value;}
+}
+
+
+$body-bg-color: #F4F8F9 !default;
+$blue:    #4D79F6 !default;
+$bluelink: #ABC1FF !default;
+$deepsky: #4DBFF6 !default;
+$green:   #83CE77 !default;
+$yellow:  #FFBE00 !default;
+$orange:  #FF9500 !default;
+$red:     #D24546 !default;
+$purple:  #6f42c1 !default;
+$water:   #F6FCFF !default;
+
+$colors: () !default;
+
+$colors: map-merge(
+	(
+		"blue": 		$blue,
+		"bluelink": 	$bluelink,
+		 "deepsky":		$deepsky,
+		 "green":		$green,		
+		 "yellow":		$yellow,	
+		 "orange":		$orange,	
+		 "red":			$red,	
+		 "purple":		$purple,	
+		 "water":		$water,	
+		), 
+	$colors,
+);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $deepsky !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-600 !default; 
+
+$lead-font-size:              2rem !default;
+$lead-font-weight:            600 !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+
+
